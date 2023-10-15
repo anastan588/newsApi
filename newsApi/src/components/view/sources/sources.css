@@ -1,0 +1,128 @@
+.sources_container {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .sources_container {
+        position: absolute;
+        right: -100%;
+        max-width: 320px;
+        height: 100%;
+        top: 115px;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        z-index: 6;
+        background-color: rgba(41, 41, 41, 0.9);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sources_container {
+        top: 90px;
+    }
+}
+
+.search {
+    display: flex;
+    margin: 0.5em;
+    gap: 5px;
+    border-radius: 8px;
+    /* width: 100%; */
+}
+.search_input {
+    border: 2px solid #30c5ff;
+    font: inherit;
+    line-height: 1;
+    color: #70d6ff;
+    transition: 0.25s;
+    cursor: pointer;
+    background: none;
+    width: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+}
+.search_submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #30c5ff;
+    background-color: #30c5ff;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 8px;
+}
+.search_image {
+    width: 70%;
+    height: 70%;
+}
+
+.sources {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+    font: 300 1em 'Fira Sans', sans-serif;
+    height: 60vh;
+}
+
+@media screen and (max-width: 900px) {
+    .sources {
+       height: 70vh;  
+    }
+   
+}
+
+.sources::-webkit-scrollbar {
+    width: 15px;
+    background-color: #143861;
+}
+
+.sources::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+.sources::-webkit-scrollbar-thumb {
+    background-color: #843465;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+.source__item {
+    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #30c5ff;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: #70d6ff;
+    transition: 0.25s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.display_none {
+    display: none;
+}
+
+.source__item:hover,
+.source__item:focus {
+    border-color: #3fcc59;
+    color: #69db7e;
+    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    transform: translateY(-0.25em);
+}
+
+.source__item-name {
+    font-weight: 400;
+    white-space: wrap;
+}
